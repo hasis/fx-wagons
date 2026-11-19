@@ -75,10 +75,10 @@ static const FxSpec FX_SPEC[FX_WAGONS] = {
 
 // A knob's value in words (fx_ui.cpp fx_value, in the font's small letters), else 0 for an amount (a percentage).
 static inline const char* fx_words(int kind, int k, u16 p, char* val){
-    if (kind == FX_W_GATE && k == 1) { static const char* const n[8] = {"1/4", "1/8", "1/16", "1/8t", "stab", "chrl", "sync", "trance"}; return n[gate_pattern(p) & 7]; }
+    if (kind == FX_W_GATE && k == 1) { static const char* const n[8] = {"1/4", "1/8", "1/16", "1/8t", "stab", "chrl", "sync", "trnc"}; return n[gate_pattern(p) & 7]; }   // 4 letters at most: the page's value column holds 4 of the firmware's
     if (kind == FX_W_FREEZE && k == 0 && p <= 1000) return "off";
     if (kind == FX_W_FREEZE && k == 1) { const int st = freeze_semis(p); int j = 0; if (st) val[j++] = st < 0 ? '-' : '+';
-        const int a = st < 0 ? -st : st; if (a >= 10) val[j++] = '1'; val[j++] = (char)('0' + a % 10); val[j] = 0; return val; }
+        const int a = st < 0 ? -st : st; if (a >= 10) val[j++] = '1'; val[j++] = (char)('0' + (a >= 10 ? a - 10 : a)); val[j] = 0; return val; }
     if (kind == FX_W_FREEZE && k == 2) return p > 16384 ? "on" : "off";
     if (kind == FX_W_JUNO && k == 0) { static const char* const n[3] = {"i", "ii", "i+ii"}; return n[p < 10923 ? 0 : p < 21845 ? 1 : 2]; }
     return 0;

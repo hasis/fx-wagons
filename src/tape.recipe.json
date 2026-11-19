@@ -1,7 +1,7 @@
 {
   "about": "TAPE, a worn tape machine, as a wagon of fx train (11 or later): WOW, FLUTTER, SATURATE (level-matched, never fuzz), AGE (treble loss, hiss, dropouts). Pick it on a train knob (not the lamp's); tap it for its page. Source: tools/pack/fx/fx_pack.cpp.",
   "name": "tape",
-  "version": 1,
+  "version": 3,
   "interface": 1,
   "build": "tape",
   "sources": [
@@ -27,8 +27,8 @@
   ],
   "pictures": [
     {
-      "name": "fxwagon.svg",
-      "file": "ext/tape/../fx/fxwagon.svg.make"
+      "name": "tape.svg",
+      "file": "ext/tape/../fx/tape.svg.make"
     }
   ],
   "card": {

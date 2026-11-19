@@ -23,24 +23,47 @@ The lamp's knob never offers them: the firmware's own slot can't carry an effect
 
 ## On the unit
 
-Tap a wagon's knob for its page. The four knobs turn its values; T3 goes back to the train. The train keeps the values in its file and in its presets.
+Tap a wagon's knob for its page: every wagon has a faceplate of its own that moves with the sound. The four knobs turn its values, read on the right in encoder order; T3 goes back to the train. The train keeps the values in its file and in its presets. On each faceplate a knob's part of the drawing is in that knob's colour, so nothing hangs on telling colours apart.
 
-| | |
-| --- | --- |
-| ![JUNEAUX's faceplate](pictures/page-juneaux.png) | **JUNEAUX** has a faceplate of its own: the lights over the buttons I and II show the mode, and the two voices weave over the panel at the mode's speed, wider with DEPTH |
-| ![TAPE's page](pictures/page-tape.png) | **TAPE**: WOW and FLUTTER wobble the pitch, SATURATE warms it (level-matched, no hard clipping), AGE rolls off the top and adds hiss and the odd dropout |
-| ![GATE's page](pictures/page-gate.png) | **GATE** chops in time with the tempo and follows a change of BPM |
-| ![FREEZE's page](pictures/page-freeze.png) | **FREEZE** catches what's playing as you turn HOLD up and lets it go at 0 |
+### JUNEAUX
+
+![JUNEAUX's faceplate](pictures/page-juneaux.png)
+
+The lights over the buttons I and II show the mode (1st knob), and the two voices weave over the panel at the mode's speed, wider with DEPTH (3rd).
+
+### TAPE
+
+![TAPE's faceplate](pictures/page-tape.png)
+
+Two reels turn. WOW (1st) sways their speed and the tape between them, FLUTTER (2nd) makes the tape over the head tremble, SATURATE (3rd) thickens the head and gives it a glow (level-matched, no hard clipping), AGE (4th) scatters specks of wear as the top rolls off and hiss and the odd dropout creep in. All the way up:
+
+![TAPE worn](pictures/page-tape-worn.png)
+
+### GATE
+
+![GATE's faceplate](pictures/page-gate.png)
+
+The bar's openings, drawn from the pattern itself (2nd knob: 1/4, 1/8, 1/16, 1/8t, stab, chrl, sync, trnc), as wide as LENGTH (3rd), square or rounded by SMOOTH (4th); the dashed line is how far DEPTH (1st) shuts it. Below, a door for each hit swings open under a playhead that runs in time with the tempo. The trance pattern, rounded:
+
+![GATE on trnc](pictures/page-gate-trance.png)
+
+### FREEZE
+
+![FREEZE's faceplate](pictures/page-freeze.png)
+
+Turn HOLD (1st) up and a flake grows and turns as it catches what's playing; at 0 it lets go. PITCH (2nd) is the marker on a ruler from -12 to +12, FOLLOW (3rd) a chain link that closes when it follows CHERD's chord, SMEAR (4th) the streaks drifting off. Holding all the way, an octave down, smeared:
+
+![FREEZE held](pictures/page-freeze-full.png)
 
 A wagon switched off (hold its knob) stands on the siding, dimmed:
 
 ![A parked wagon](pictures/train-parked.png)
 
-The pictures are drawn on a Mac from the same picture files the unit draws, with a stand-in for the firmware's letters.
+The pictures are drawn on a Mac from the same picture files the unit draws, with a stand-in as wide as the firmware's letters.
 
 ## Source
 
 - **JUNEAUX** is open-field's example of a wagon: [`examples/juneaux`](https://github.com/LaP0573/open-field/tree/main/examples/juneaux) builds `field/juneaux.pack` byte for byte.
-- **TAPE, GATE, FREEZE**: [`src/`](src). One source, `fx_pack.cpp`, makes each pack from a two-line file (`tape_pack.cpp` and the others), with a recipe each. The effects come from the chains of our older OP-1 Field firmware: `fx_special.cpp` (GATE, FREEZE), `fx_tape.h` with `fx_tape_wagon.h` (TAPE). `host_check.cpp` runs every wagon on the Mac against its reference and writes WAVs. The table a wagon fills is open-field's `module/op1f_wagon.h`.
+- **TAPE, GATE, FREEZE**: [`src/`](src). One source, `fx_pack.cpp`, makes each pack from a two-line file (`tape_pack.cpp` and the others), with a recipe each; `face.py` writes their faceplates (`tape.svg.make` and the others) and the pictures here. The effects come from the chains of our older OP-1 Field firmware: `fx_special.cpp` (GATE, FREEZE), `fx_tape.h` with `fx_tape_wagon.h` (TAPE). `host_check.cpp` runs every wagon on the Mac against its reference and writes WAVs. The table a wagon fills is open-field's `module/op1f_wagon.h`.
 
 MIT licence. JUNEAUX's numbers come from [pendragon-andyh/Juno60](https://github.com/pendragon-andyh/Juno60).
