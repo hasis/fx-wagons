@@ -1,0 +1,46 @@
+{
+  "about": "GATE, a tempo-locked gate, as a wagon of fx train (11 or later): DEPTH, PATTERN (1/4 .. TRANCE), LENGTH, SMOOTH; follows CHERD's chord when cherd.pack is there. Pick it on a train knob (not the lamp's); tap it for its page. Source: tools/pack/fx/fx_pack.cpp.",
+  "name": "gate",
+  "version": 1,
+  "interface": 1,
+  "build": "gate",
+  "sources": [
+    "ext/gate/build/gate_pack.s",
+    "ext/gate/gate_card.s",
+    "ext/gate/gate_pictures.s"
+  ],
+  "works_with": [
+    {
+      "name": "fx train",
+      "interface": 1,
+      "needed": false
+    },
+    {
+      "name": "cherd",
+      "interface": 1,
+      "needed": false
+    }
+  ],
+  "serves": [],
+  "exports": [
+    "op1f_wagon_gate"
+  ],
+  "pictures": [
+    {
+      "name": "fxwagon.svg",
+      "file": "ext/gate/../fx/fxwagon.svg.make"
+    }
+  ],
+  "card": {
+    "level": 3,
+    "frame": "fx_frame",
+    "pick": null,
+    "pictures": true,
+    "input": "fx_input",
+    "folders": []
+  },
+  "marks": [],
+  "named": true,
+  "sum": true,
+  "path": null
+}
