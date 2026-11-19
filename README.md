@@ -8,7 +8,7 @@ Four effects for the OP-1 Field's **fx train**, each a pack of its own for [open
 | --- | --- | --- |
 | `juneaux.pack` | **JUNEAUX**: the Juno-60 chorus, with its own faceplate | MODE (I, II, I+II), MIX, DEPTH, TONE |
 | `tape.pack` | **TAPE**: a worn tape machine, for mellotron-ish keys and pads. Turned all the way up it gets wobblier, darker and more worn, never fuzzy | WOW, FLUTTER, SATURATE, AGE |
-| `gate.pack` | **GATE**: a gate locked to the tempo | DEPTH, PATTERN (1/4, 1/8, 1/16, 1/8t, stab, chrl, sync, trance), LENGTH, SMOOTH |
+| `gate.pack` | **GATE**: a gate locked to the tempo | DEPTH, PATTERN (1/4, 1/8, 1/16, 1/8t, stab, chrl, sync, trnc), LENGTH, SMOOTH |
 | `freeze.pack` | **FREEZE**: holds a moment as a pad | HOLD (up from 0 catches, 0 lets go), PITCH (semitones), FOLLOW, SMEAR |
 
 GATE and FREEZE follow the chord of [CHERD](https://github.com/hasis/cherd) when `cherd.pack` is on the unit too. Each wagon is light: 20,000 to 30,000 cycles a block.
