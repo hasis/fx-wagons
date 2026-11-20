@@ -1,7 +1,7 @@
 {
   "about": "FREEZE, a moment held as a pad, as a wagon of fx train (11 or later): HOLD (up from 0 captures, 0 lets go), PITCH, FOLLOW (CHERD's chord when cherd.pack is there), SMEAR. Pick it on a train knob (not the lamp's); tap it for its page. Source: tools/pack/fx/fx_pack.cpp.",
   "name": "freeze",
-  "version": 3,
+  "version": 4,
   "interface": 1,
   "build": "freeze",
   "sources": [

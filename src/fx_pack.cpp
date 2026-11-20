@@ -112,8 +112,8 @@ extern "C" int fx_input(const Op1fInput* e) {
         return 1;
     }
     if ((e->what == (u32)OP1F_DOWN || e->what == (u32)OP1F_DOWN_SHIFT) &&
-        ((e->key >= (u32)KEY_CLICK_1 && e->key <= (u32)KEY_CLICK_4) || (e->key >= (u32)KEY_PRESS_1 && e->key <= (u32)KEY_PRESS_4))) return 1;   // the knobs are the page's
-    return 0;
+        ((e->key > (u32)KEY_CLICK_1 && e->key <= (u32)KEY_CLICK_4) || (e->key >= (u32)KEY_PRESS_1 && e->key <= (u32)KEY_PRESS_4))) return 1;   // the knobs are the page's
+    return 0;                                        // but the 1st knob's click: the train's, which closes the page (fx train 12, tape train 6)
 }
 
 // ---------------------------------------------------------------- the display thread

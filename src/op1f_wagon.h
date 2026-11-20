@@ -13,6 +13,9 @@
 //     and then to every process() of that instance. One instance for each knob of each host at most (eight), built and
 //     thrown away as the knob's pick and the sound slot change; the state is the train's memory, never the pack's;
 //   - a tap on its wagon calls page(), and nothing when it has none;
+//   - on that page the pack's input function leaves the 1st knob's click (the key 54, plain and with shift) alone:
+//     the train takes it and closes the page, as T3 does on a sound and the mixer key on a tape track (fx train 12,
+//     tape train 6). The other clicks and the presses are the page's;
 //   - it never stands under the lamp: the firmware's own slot cannot carry it, so the lamp's knob does not offer it,
 //     and its values have no page of the firmware's;
 //   - the chain file and the presets keep it by its name: its first four characters stand where an effect's number

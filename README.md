@@ -23,7 +23,7 @@ The lamp's knob never offers them: the firmware's own slot can't carry an effect
 
 ## On the unit
 
-Tap a wagon's knob for its page: every wagon has a faceplate of its own that moves with the sound. The four knobs turn its values, read on the right in encoder order; T3 goes back to the train. The train keeps the values in its file and in its presets. On each faceplate a knob's part of the drawing is in that knob's colour, so nothing hangs on telling colours apart.
+Tap a wagon's knob for its page: every wagon has a faceplate of its own that moves with the sound. The four knobs turn its values, read on the right in encoder order; T3 or a click of the 1st knob goes back to the train (the click with `fx train.pack` 12 or later); from a tape track's train (`tape train.pack` 6 or later) the click or the mixer key does. The train keeps the values in its file and in its presets. On each faceplate a knob's part of the drawing is in that knob's colour, so nothing hangs on telling colours apart.
 
 ### JUNEAUX
 

@@ -1,7 +1,7 @@
 {
   "about": "GATE, a tempo-locked gate, as a wagon of fx train (11 or later): DEPTH, PATTERN (1/4 .. TRANCE), LENGTH, SMOOTH; follows CHERD's chord when cherd.pack is there. Pick it on a train knob (not the lamp's); tap it for its page. Source: tools/pack/fx/fx_pack.cpp.",
   "name": "gate",
-  "version": 4,
+  "version": 5,
   "interface": 1,
   "build": "gate",
   "sources": [
